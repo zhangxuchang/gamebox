@@ -23,7 +23,7 @@ function getVerion($v)
 $file = getVerion($version);
 
 $CONFIG            = array();
-$CONFIG['specicalGameCodes'] = ['lobr','lorpt','lode','loes','lonl','lopl', 'loar', 'losv', 'loel'];
+$CONFIG['specicalGameCodes'] = ['lobr','lorpt','lode','loes','lonl','lopl', 'loar', 'losv', 'loel', 'lotr'];
 $CONFIG['file']    = $file;
 $CONFIG['path']    = 'gamebox/' . $CONFIG['file'] . '/';
 $CONFIG['host']    = in_array($gamecode, $CONFIG['specicalGameCodes'], true) ? '//gamebox3.creaction-network.com/' : '//gamebox2.oasgames.com/';
