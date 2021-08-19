@@ -10,6 +10,33 @@ if(in_array($gameCode, $specialGameCode, true)) {
         header('Location:' . $redirectUrl);
     }
 }
+
+$fbAppList = [
+    'loar'     => '340989056058098',
+    'lobr'     => '237995926316918',
+    'lode'     => '819224811435018',
+    'loel'     => '745353535508346',
+    'loes'     => '525004654217362',
+    'lofr'     => '1723488324541538',
+    'loit'     => '653755921394361',
+    'lonl'     => '598441633564232',
+    'lopl'     => '454465281300872',
+    'lorpt'    => '127066761352922',
+    'lortr'    => '912886975477479',
+    'loru'     => '1597523750505918',
+    'losv'     => '388606374615694',
+    'lotr'     => '340651019346903',
+    'narutode' => '1538179059837850',
+    'narutoen' => '447973262074550',
+    'narutoes' => '1512682705727003',
+    'narutofr' => '562265367280905',
+    'narutoit' => '1074884879203121',
+    'narutopl' => '231602602186835',
+    'narutopt' => '951098834965349',
+    'narutotr' => '458874980963094',
+];
+
+$gameFbAppId = (isset($fbAppList[$gameCode])) ? $fbAppList[$gameCode] : '447973262074550';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,6 +50,10 @@ if(in_array($gameCode, $specialGameCode, true)) {
 <?php }; ?>
 <script src="<?php echo $CONFIG['dir']?>static/package/jquery.min.js?ver=<?php echo $CONFIG['version']?>" type="text/javascript"></script>
 <script src="<?php echo $CONFIG['dir']?>static/package/oas.lang.js?ver=<?php echo $CONFIG['version']?>" type="text/javascript"></script>
+
+<script type="text/javascript">
+    var FB_APP_ID = "<?php echo $gameFbAppId?>";
+</script>
 </head>
 <?php include_once('../../gdpr/gdpr.php'); ?>
 <body scroll="no" style=" background: #e4e4e4;">
