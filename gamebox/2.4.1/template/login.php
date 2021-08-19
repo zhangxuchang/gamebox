@@ -20,13 +20,15 @@ $fbAppList = [
     'narutoes' => '1512682705727003',
     'narutofr' => '562265367280905',
     'narutoit' => '1074884879203121',
-    'narutopl' => '1065635026788056',
+    'narutopl' => '231602602186835',
     'narutopt' => '951098834965349',
     'narutotr' => '458874980963094',
 ];
 
 $gameCode    = $_REQUEST['gameid'];
 $gameFbAppId = (isset($fbAppList[$gameCode])) ? $fbAppList[$gameCode] : '447973262074550';
+
+
 
 $specialGameCode = $CONFIG['specicalGameCodes'];
 
@@ -37,6 +39,7 @@ if(in_array($gameCode, $specialGameCode, true)) {
         header('Location:' . $redirectUrl);
     }
 }
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
