@@ -26,17 +26,17 @@ $fbAppList = [
     'loru'     => '852288555719972',
     'losv'     => '852288555719972',
     'lotr'     => '852288555719972',
-    'narutode' => '231602602186835',
-    'narutoen' => '231602602186835',
-    'narutoes' => '231602602186835',
-    'narutofr' => '231602602186835',
-    'narutoit' => '231602602186835',
-    'narutopl' => '231602602186835',
-    'narutopt' => '231602602186835',
-    'narutotr' => '231602602186835',
+    'narutode' => '394718192364866',
+    'narutoen' => '394718192364866',
+    'narutoes' => '394718192364866',
+    'narutofr' => '394718192364866',
+    'narutoit' => '394718192364866',
+    'narutopl' => '394718192364866',
+    'narutopt' => '394718192364866',
+    'narutotr' => '394718192364866',
 ];
 
-$gameFbAppId = (isset($fbAppList[$gameCode])) ? $fbAppList[$gameCode] : '231602602186835';
+$gameFbAppId = (isset($fbAppList[$gameCode])) ? $fbAppList[$gameCode] : '394718192364866';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
