@@ -10,7 +10,8 @@ var mData = window.mData || [];
     js=d.createElement('script');
     js.id=id;
     js.async=true;
-    js.src="//cdn.gooogleyahooo.net/static/package/md.js?version=" + GSY.config.get('version');
+    // js.src="//cdn.gooogleyahooo.net/static/package/md.js?version=" + GSY.config.get('version');
+	js.src="//img.oasgames.com/upload/1545972729/md.js?version=" + GSY.config.get('version');
     ref.parentNode.insertBefore(js,ref);
 }(document));
 

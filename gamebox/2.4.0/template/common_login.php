@@ -1,4 +1,45 @@
-<?php include_once('../config.php');?>
+<?php include_once('../config.php');
+
+$gameCode    = $_REQUEST['gameid'];
+$specialGameCode = $CONFIG['specicalGameCodes'];
+
+if(in_array($gameCode, $specialGameCode, true)) {
+    $host = rtrim($CONFIG['host'],"/");
+    $redirectUrl = $host . $_SERVER['REQUEST_URI'];
+    if($_SERVER['HTTP_HOST'] !== 'gamebox2.creaction-network.com') {
+        header('Location:' . $redirectUrl);
+    }
+}
+
+$fbAppList = [
+    'loar'     => '852288555719972',
+    'lobr'     => '852288555719972',
+    'lode'     => '852288555719972',
+    'loel'     => '852288555719972',
+    'loes'     => '852288555719972',
+    'lofr'     => '852288555719972',
+    'loit'     => '852288555719972',
+    'lonl'     => '852288555719972',
+    'lopl'     => '852288555719972',
+    'lorpt'    => '852288555719972',
+    'lortr'    => '852288555719972',
+    'loru'     => '852288555719972',
+    'losv'     => '852288555719972',
+    'lotr'     => '852288555719972',
+    'narutode' => '394718192364866',
+    'narutoen' => '394718192364866',
+    'narutoes' => '394718192364866',
+    'narutofr' => '394718192364866',
+    'narutoit' => '394718192364866',
+    'narutopl' => '394718192364866',
+    'narutopt' => '394718192364866',
+    'narutotr' => '394718192364866',
+];
+
+$gameFbAppId = (isset($fbAppList[$gameCode])) ? $fbAppList[$gameCode] : '394718192364866';
+
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -11,6 +52,9 @@
 <?php }; ?>
 <script src="<?php echo $CONFIG['dir']?>static/package/jquery.min.js?ver=<?php echo $CONFIG['version']?>" type="text/javascript"></script>
 <script src="<?php echo $CONFIG['dir']?>static/package/oas.lang.js?ver=<?php echo $CONFIG['version']?>" type="text/javascript"></script>
+    <script type="text/javascript">
+        var FB_APP_ID = "<?php echo $gameFbAppId?>";
+    </script>
 </head>
 <?php include_once('../../gdpr/gdpr.php'); ?>
 <body scroll="no" style=" background: #e4e4e4;">
