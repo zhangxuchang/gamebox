@@ -168,7 +168,10 @@ var FB_APP_ID = "<?php echo $gameFbAppId?>";
 			</div>
 			<div class="lopl-login-box-wrap" id="common-login-box-wrap" >
 				<div class="lopl-login-center">
-					<h4><em></em><span><script type="text/javascript">OASWriteContent('Gamebox_AccountOasgames_mynet')</script></span></h4>
+					<h4 style="height: 30px;">
+<!--                        <em></em>-->
+<!--                        <span><script type="text/javascript">OASWriteContent('Gamebox_AccountOasgames_mynet')</script></span>-->
+                    </h4>
 					<ul class="lopl-login-wrap-up">
 						<li>
 							<div class="gb-login-div">
@@ -253,7 +256,10 @@ var FB_APP_ID = "<?php echo $gameFbAppId?>";
 			</div>
 			<div class="lopl-login-box-wrap" id="common-login-box-wrap" >
 				<div class="lopl-login-center">
-					<h4><em></em><span><script type="text/javascript">OASWriteContent('Gamebox_AccountOasgames')</script></span></h4>
+					<h4 style="height: 30px;">
+<!--                        <em></em>-->
+<!--                        <span><script type="text/javascript">OASWriteContent('Gamebox_AccountOasgames')</script></span>-->
+                    </h4>
 					<ul class="lopl-login-wrap-up">
 						<li>
 							<div class="gb-login-div">
@@ -302,7 +308,9 @@ var FB_APP_ID = "<?php echo $gameFbAppId?>";
 			</div>
 			<div class="lopl-register-box-wrap" id="common-register-box-wrap" style="display:none;">
 				<div class="lopl-register-center">
-					<h4><em></em><span><script type="text/javascript">OASWriteContent('Gamebox_AccountOasgames')</script></span></h4>
+					<h4>
+<!--                        <em></em><span><script type="text/javascript">OASWriteContent('Gamebox_AccountOasgames')</script></span>-->
+                    </h4>
 					<ul class="lopl-register-wrap-up">
 						<li>
 							<div class="gb-register-div">
