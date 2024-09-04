@@ -1,14 +1,17 @@
 <?php include_once('../config.php');
 
-$gameCode    = $_REQUEST['gameid'];
 $specialGameCode = $CONFIG['specicalGameCodes'];
 
+$host = rtrim($CONFIG['host'],"/");
+$redirectUrl = $host . $_SERVER['REQUEST_URI'];
+
 if(in_array($gameCode, $specialGameCode, true)) {
-    $host = rtrim($CONFIG['host'],"/");
-    $redirectUrl = $host . $_SERVER['REQUEST_URI'];
-    if($_SERVER['HTTP_HOST'] !== 'gamebox2.creaction-network.com') {
+    if($_SERVER['HTTP_HOST'] !== 'gamebox3.creaction-network.com') {
         header('Location:' . $redirectUrl);
     }
+} elseif ($_SERVER['HTTP_HOST'] !== 'gamebox3.narutowebgame.com')  {
+    // 火影跳转到narutowebgame
+    header('Location:' . $redirectUrl);
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
