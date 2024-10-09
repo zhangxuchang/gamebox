@@ -29,15 +29,18 @@ $gameCode    = $_REQUEST['gameid'];
 $gameFbAppId = (isset($fbAppList[$gameCode])) ? $fbAppList[$gameCode] : '394718192364866';
 
 
-
 $specialGameCode = $CONFIG['specicalGameCodes'];
 
+$host = rtrim($CONFIG['host'],"/");
+$redirectUrl = $host . $_SERVER['REQUEST_URI'];
+
 if(in_array($gameCode, $specialGameCode, true)) {
-    $host = rtrim($CONFIG['host'],"/");
-    $redirectUrl = $host . $_SERVER['REQUEST_URI'];
-    if($_SERVER['HTTP_HOST'] !== 'gamebox2.creaction-network.com') {
+    if($_SERVER['HTTP_HOST'] !== 'gamebox3.creaction-network.com') {
         header('Location:' . $redirectUrl);
     }
+} elseif ($_SERVER['HTTP_HOST'] !== 'gamebox3.narutowebgame.com')  {
+    // 火影跳转到narutowebgame
+    header('Location:' . $redirectUrl);
 }
 
 ?>
